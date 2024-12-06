@@ -1,0 +1,15 @@
+[Unit]
+Description=Generate System Information Index
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=webgen
+Group=webgen
+ExecStart=/var/lib/webgen/bin/generate_index
+Environment=OUTPUT_DIR=/var/lib/webgen/HTML
+
+[Install]
+WantedBy=multi-user.target
+

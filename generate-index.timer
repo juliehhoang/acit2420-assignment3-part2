@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Generate Index Daily at 05:00
+
+[Timer]
+OnCalendar=*-*-* 05:00:00
+Unit=generate-index.service
+
+[Install]
+WantedBy=timers.target
+
